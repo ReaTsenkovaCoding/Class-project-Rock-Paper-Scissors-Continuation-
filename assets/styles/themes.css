@@ -1,0 +1,320 @@
+
+/*=========================================================
+             THEME BUTTONS (COLOR SELECTORS)
+=========================================================*/
+
+.theme-button{
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.4);
+  cursor:pointer;
+  background-color: transparent;
+  padding:0;
+  position: relative; 
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.theme-button:hover{
+  transform: scale(1.12);
+  box-shadow: 0 0 14px rgba(255,255,255, 0.502);
+}
+
+.theme-button::after{
+  position: absolute;
+  top: 30px;
+  right: 1%;
+
+  background: rgba(0,0,0,0.75);
+  color:white;
+  font-size:12px;
+  padding:5px 8px;
+  border-radius:8px;
+
+  white-space: nowrap;
+  opacity:0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/*=========================================================
+                  THEME BUTTON COLORS
+=========================================================*/
+
+.theme-button[data-theme="black"]{ background: rgba(25, 25, 25, 0.831); }
+.theme-button[data-theme="purple"]{ background: rgba(68, 33, 106, 0.839); }
+.theme-button[data-theme="blue"]{ background: rgba(142, 174, 218, 0.724); }
+.theme-button[data-theme="green"]{ background: rgba(75, 127, 82, 0.627); }
+.theme-button[data-theme = "rainbow"]{ background: linear-gradient(rgb(131, 21, 21), orange, rgb(255, 244, 88), rgb(59, 152, 59), rgb(89, 158, 255), rgb(112, 32, 170), violet); }
+
+.theme-button[data-theme="pink"]{ background: rgba(190, 62, 126, 0.716); }
+.theme-button[data-theme="red"]{ background: rgba(190, 42, 42, 0.737); }
+.theme-button[data-theme="orange"]{ background: rgba(255, 140, 0, 0.622); }
+.theme-button[data-theme="yellow"]{ background: rgba(255, 221, 0, 0.701); }
+.theme-button[data-theme = "white"]{ background: rgb(255, 255, 255); }
+
+/*=========================================================
+               THEME IMAGES (ANIMATED PNGs)
+=========================================================*/
+
+.theme-png-right{
+  position: fixed;
+  top: 350px;         
+  right: 190px;      
+  width: 140px;      
+  height: 140px;
+  background-image: var(--themePng);
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  opacity: 0.8;
+
+  transform: translateY(-12px); 
+}
+
+.theme-png-right.show{
+  opacity: 0.8;               
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: dropPop 1s ease-out;
+}
+
+.theme-png-left{
+  position: fixed;
+  top: 350px;         
+  left: 190px;      
+  width: 140px;      
+  height: 140px;
+  background-image: var(--themePng);
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center;
+
+  opacity: 0.8;               
+  transform: translateY(-12px); 
+}
+
+.theme-png-left.show{
+  opacity: 0.8;               
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: dropPop 1s ease-out;
+}
+
+/*=========================================================
+                        BLACK THEME
+========================================================= */
+
+
+body.theme-black {
+  --bg: rgb(25,25,25);
+  --text:white;
+  --border:white;
+  --btnHover: rgba(200,200,200,0.1);
+  --muted: rgba(255, 255, 255, 0.435);
+  --themePng: url('../images/black.png');
+
+}
+
+/*=========================================================
+                       PURPLE THEME
+=========================================================*/
+
+body.theme-purple{
+
+  --bg: rgb(50, 37, 64);
+  --text: #f3e8ff;
+  --border: #f3e8ff;
+  --btnHover: rgba(125, 103, 149, 0.2);
+  --muted: #d8bfff65;
+  --themePng: url('../images/purple.png');
+
+}
+
+body.theme-purple .reset-score-button{
+    color: #7958ae;
+    border: 3px solid #906ab9;
+    transition: all 0.3s ease;
+  }
+
+/*=========================================================
+                       BLUE THEME
+=========================================================*/
+
+body.theme-blue{
+  
+  --bg: #111827;        
+  --text: #c7d2fe;     
+  --border: #c7d2fe;    
+  --btnHover: rgba(100,116,139,0.25);
+  --muted: #a5b4fc65;
+  --themePng: url('../images/blue.png');
+}
+
+body.theme-blue .reset-score-button{
+  border: 3px solid #6371a7;
+  color: #47527f;
+  transition: all 0.3s ease;
+}
+
+body.theme-blue .js-result{
+  text-shadow: 0 0 8px rgb(99, 151, 214);
+}
+
+/*=========================================================
+                       GREEN THEME
+=========================================================*/
+
+body.theme-green{
+
+  --bg: #1d2c0e;       
+  --text: #ecffcc;      
+  --border: #ecffcc;    
+  --btnHover: rgba(179, 255, 0, 0.25);
+  --muted: #ecffcc65;
+  --themePng: url('../images/green.png');
+
+}
+body.theme-green .reset-score-button{
+  color: rgba(66, 88, 15, 0.721);
+  border: 3px solid #a2bb76;
+  transition: all 0.3s ease;
+}
+
+/*=========================================================
+                       RED THEME
+=========================================================*/
+
+body.theme-red{
+  --bg: #4e1818;
+  --text: #f89090;
+  --border: #f89090;
+  --btnHover: rgba(255, 102, 102, 0.25);
+  --muted: #a66c6cd1;
+  --themePng: url('../images/red.png');
+}
+body.theme-red .reset-score-button{
+  border: 3px solid #a95050;
+  color:#944e4e;
+  transition: all 0.3s ease;
+}
+body.theme-red .js-result{
+  text-shadow: 0 0 8px rgb(177, 47, 8);
+}
+
+/*=========================================================
+                       ORANGE THEME
+=========================================================*/
+
+body.theme-orange{
+  --bg: #844b19;
+  --text: #ffc588;
+  --border: #ffc588;
+  --btnHover: rgba(255, 132, 0, 0.296);
+  --muted: #412d1be5;
+  --themePng: url('../images/orange.png');
+}
+body.theme-orange .reset-score-button{
+  border: 3px solid #d78b4d;
+  color: #b67540;
+  transition: all 0.3s ease;
+}
+body.theme-orange .js-result{
+  text-shadow: 0 0 8px rgb(195, 104, 8);
+}
+
+/*=========================================================
+                       YELLOW THEME
+=========================================================*/
+
+body.theme-yellow{
+  --bg: #f9d95c;
+  --text: #6a5a1cc1;
+  --border: #ffffff;
+  --muted: #6a5a1cc1;
+  --themePng: url('../images/yellow.png');
+}
+body.theme-yellow .move-button{
+  background-color: #fde688;
+}
+body.theme-yellow .move-button:hover{
+  transition: 0.2s ease;
+  background-color: #ffffb2;
+}
+body.theme-yellow .theme-button{
+  border: 3px solid rgba(71, 71, 71, 0.619);
+}
+body.theme-yellow .reset-score-button{
+  border: 3px solid #d4b106;
+  color: #c5a95c;
+  transition: all 0.3s ease;
+}
+body.theme-yellow .js-result{
+  text-shadow: 0 0 10px rgba(158, 84, 10, 0.517);
+}
+
+/*=========================================================
+                       PINK THEME
+=========================================================*/
+
+body.theme-pink{
+  --bg: #5b294b;
+  --text: #ffb5d9;
+  --border: #ffb5d9;
+  --btnHover: rgba(252, 124, 198, 0.398);
+  --muted: #eb9ac17b;
+  --themePng: url('../images/pink.png');
+}
+body.theme-pink .reset-score-button{
+  border: 3px solid #d87ca3;
+  color: #c7638e;
+  transition: all 0.3s ease;
+}
+body.theme-pink .js-result{
+  text-shadow: 0 0 10px rgba(255, 0, 170, 0.606);
+}
+
+/*=========================================================
+                       WHITE THEME
+=========================================================*/
+
+body.theme-white{
+  --bg: rgb(255, 255, 255);
+  --text: rgb(66, 66, 66);
+  --border: rgb(66,66,66);
+  --btnHover: rgba(200, 200, 200, 0.228);
+  --muted: rgba(71, 71, 71, 0.619);
+  --themePng: url('../images/white.png');
+}
+
+body.theme-white .js-result{
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.266);
+}
+
+body.theme-white .reset-score-button{
+  color: rgba(255,255,255,1);
+  background-color: rgb(66, 66, 66);
+  border: 3px solid rgba(15, 15, 15, 0.619);
+  transition: all 0.3s ease;
+}
+body.theme-white .reset-score-button:hover{
+  background-color: rgb(119, 119, 119);
+}
+body.theme-white .theme-button{
+  border: 3px solid rgba(71, 71, 71, 0.619);
+}
+body.theme-white .move-button:hover{
+  box-shadow: 0 0 14px rgb(0, 0, 0);
+}
+
+/*=========================================================
+                  ACTIVE THEME INDICATOR
+=========================================================*/
+
+.theme-button.active{
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}

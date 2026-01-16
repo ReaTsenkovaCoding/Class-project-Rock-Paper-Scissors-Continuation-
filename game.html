@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+  <html lang = "en">
+    <head>
+      <link rel="icon" type="image/png" href="assets/images/icon.png">
+      <meta charset="UTF-8">
+      <title class = "game-title">Rock Paper Scissors</title>
+      <link rel = "stylesheet" href = "assets/styles/base.css">
+      <link rel = "stylesheet" href = "assets/styles/themes.css">
+
+      <!--rel = relation (what type of file of file we're adding -> stylesheet = css file)
+
+        href = which file to load
+      -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+
+      <nav class="navbar">
+        <!-- LEFT SIDE -->
+        <a class="my-project" href="index.html">My project🏠</a>
+        
+        <!-- CENTER -->
+         <div class = "nav-themes">
+            <button class = "theme-button" title = "Black theme" data-theme = "black"></button>
+            <button class = "theme-button" title = "Purple theme" data-theme = "purple"></button>
+            <button class = "theme-button" title = "Blue theme" data-theme = "blue"></button>
+            <button class = "theme-button" title = "Green theme" data-theme = "green"></button>
+            <button class = "theme-button" title = "Red theme" data-theme = "red"></button>
+            <button class = "theme-button" title = "Orange theme" data-theme = "orange"></button>
+            <button class = "theme-button" title = "Yellow theme" data-theme = "yellow"></button>
+            <button class = "theme-button" title = "Pink theme" data-theme = "pink"></button>
+            <button class = "theme-button" title = "White theme" data-theme = "white"></button>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="nav-links">
+            <a class="nav-link" href="game.html" title = "Click to play Rock Paper Scissors">Game</a>
+            <a class="nav-link" href="facts.html" title = "Click to read fun facts about Rock Paper Scissors">Facts</a>
+         </div>
+        </nav>
+
+      <div class = "game">
+      <p class = "title">Rock Paper Scissors</p>
+      <p class = "subtext"><small>( First to win 5 points wins! )</small></p>
+        
+
+        <button title = "rock" onclick = "
+          playGame('rock');
+
+        " class = "move-button"><img src = "assets/images/rock-emoji.png" class = "move-icon" alt = "Rock move emoji"></button>
+
+        <button title = "paper" onclick = "
+          playGame('paper');
+
+        " class = "move-button"><img src = "assets/images/paper-emoji.png" class = "move-icon" alt = "Paper move emoji"></button>
+
+        <button title = "scissors" onclick = "
+          playGame('scissors');
+          
+        " class = "move-button"><img src = "assets/images/scissors-emoji.png" class = "move-icon" alt = "Scissors move emoji"></button>
+        
+        <p class = "js-result result"></p>
+        <p class = "js-moves"></p>
+        <p class = "js-score"></p>
+
+        <button title = "Click to reset score" onclick = "
+
+          score.wins = 0;
+          score.losses = 0;
+          score.ties = 0;
+
+          localStorage.removeItem('score');
+          updateScoreElement();
+          gameOver = false;
+          
+          document.querySelector('.js-moves').innerHTML = '';
+          document.querySelector('.js-result').innerHTML = '';
+          localStorage.removeItem('lastMoves'); //clear the images after resetting the game
+
+        " class = "reset-score-button">Reset score</button>
+        
+        <p class = "clarification-message"><small>( don't worry, your data is saved even after reloading the page. )</small></p>
+    </div>
+
+      <div class = "theme-png-right" aria-hidden = true></div>
+      <div class = "theme-png-left" aria-hidden = true></div>
+
+      <script src = "assets/scripts/game.js"></script>
+      <script src = "assets/scripts/theme.js"></script>
+      <script src = "assets/scripts/sound-effects.js"></script>
+      <footer> © Rea Tsenkova  · NBU · F117249 </footer>
+    </body>
+  </html>

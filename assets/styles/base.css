@@ -1,0 +1,362 @@
+
+/*=========================================================
+            ROOT VARIABLES (DEFAULT THEME COLORS)
+=========================================================*/
+:root{ 
+  --bg: rgb(25,25,25);
+  --text:white;
+  --border:white;
+  --btnHover: rgba(200,200,200,0.1); 
+  --themePng: none;
+
+}
+
+/*=========================================================
+                      BASE PAGE STYLES
+=========================================================*/
+
+
+body {
+
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  margin:0;
+  margin-top:10px;
+
+  padding-bottom:5%;
+  
+}
+
+/*=========================================================
+                     MAIN GAME LAYOUT
+=========================================================*/
+
+.game {
+  text-align: center;
+}
+
+/*=========================================================
+                        TITLES AND TEXT
+=========================================================*/
+
+.title {
+
+  font-size: 100px;
+  font-weight: bold; 
+  margin-bottom:auto;
+  margin-top: auto;
+
+}
+
+.index-title {
+  font-size: 120px;
+  font-weight: bold; 
+}
+
+.index-logo{
+  width: 200px;
+  margin-top: 20px;
+  
+}
+
+.subtext {
+  font-size: 25px;
+  margin-bottom: 50px;
+  margin-top: 15px;
+}
+
+/*=========================================================
+                 MOVE ICONS AND BUTTONS
+=========================================================*/
+
+.move-icon {
+  
+  height: 60px;
+  cursor:pointer;
+}
+
+.move-button {
+
+  background-color: transparent;
+  border: 3px solid var(--border);
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin-right: 15px;
+  margin-left:15px;
+  cursor:pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.move-button:hover {
+  background-color: var(--btnHover);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.502);
+  transform: scale(1.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+}
+
+/*=========================================================
+                   GAME RESULTS AND SCORE
+=========================================================*/
+
+.result {
+
+  font-size: 25px;
+  font-weight: bold;
+
+}
+
+.js-moves {
+  font-size: 25px;
+}
+
+.js-score {
+  font-size: 25px;
+}
+
+.js-result {
+
+  transition: text-shadow 0.3s ease;
+  font-size: 35px;
+   text-shadow:
+    0 0 6px rgba(255,255,255,0.6),
+  0 0 12px rgba(255,255,255,0.35);
+}
+
+/*=========================================================
+                       RESET BUTTON
+========================================================= */
+
+.reset-score-button{
+
+  color: rgba(50,50,50,1);
+  background-color: white;
+
+  padding: 8px 15px;
+  width: 200px;
+  height: 60px;
+  margin-top: 15px;
+  margin-bottom: 11px;
+
+  border: 3px solid rgba(51, 51, 51, 0.619);
+  border-radius: 50px;
+
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+
+  cursor:pointer;
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.reset-score-button:hover{
+  color:rgba(50,50,50,1);
+  transform: scale(1.12);
+  box-shadow: 0 0 14px rgba(255,255,255, 0.502);
+  transition: 0.2s ease;
+}
+
+.reset-score-button:after{
+  transition: opacity 0.15s ease, transform 0.15s ease;
+
+}
+
+/*=========================================================
+                 CLARIFICATION MESSAGE
+=========================================================*/
+
+.clarification-message {
+  font-size:25px;
+  color: var(--muted);
+  transition: color 0.3s ease;
+  
+}
+
+/*=========================================================
+                         FOOTER
+========================================================= */
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 14px;
+  color: var(--muted);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* =========================================================
+                     NAVIGATION BAR
+=========================================================*/
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 70px;
+  z-index: 999;
+
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(255,255,255,0.10);
+}
+
+.my-project{
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: var(--text);
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.nav-themes{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-links{ 
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  gap: 12px;
+}
+
+.nav-link{
+  color: var(--text);
+  text-decoration: none;
+
+  border: 3px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-link:hover{
+  transform: scale(1.06);
+  background-color: var(--btnHover);
+  box-shadow: 0 0 14px rgba(255,255,255,0.35);
+}
+/*=========================================================
+                 PAGE OFFSET FOR NAVBAR
+=========================================================*/
+
+body{ padding-top: 90px; }
+
+
+/*=========================================================
+                     RESPONSIVE DESIGN
+=========================================================*/
+
+@media (max-width: 1310px){
+  .theme-png-right.show, .theme-png-left.show{
+    display: none !important;
+  }
+
+  .index-title{
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 800px){
+  .navbar{
+    height: 140px;
+  }
+
+  .my-project{
+    top:50px;
+    left: 210px;
+  }
+
+  .nav-links{
+    top:50px;
+    right:205px;
+  }
+  
+  .nav-themes{
+    top: 105px;
+  }
+
+  .theme-button{
+    margin-right:10px;
+    margin-left:10px;
+  }
+
+  .title, .index-title {
+    margin-top: 70px;
+    font-size: 60px;
+  }
+
+  .index-title{
+    margin-top: 100px;
+  }
+
+  .subtext{
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .index-logo{
+    margin-top:100px;
+    margin-bottom: 100px;
+  }
+
+  body{
+    padding-bottom: 60px;
+  }
+
+  .move-button{
+    height:150px;
+    width: 150px;
+  }
+
+  .move-icon{
+    height: 50px;
+    width: 50px;
+  }
+
+  footer{
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 1244px){
+  .title{
+    font-size: 50px;
+  }
+}
+
+
+
+
