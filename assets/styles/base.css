@@ -225,7 +225,8 @@ footer {
   transform: translateY(-50%);
 
   color: var(--text);
-  text-decoration: none;
+  text-decoration: none; /*да няма подчертание*/
+  text-align: center;
   font-size: 22px;
   font-weight: 800;
 }
@@ -288,47 +289,60 @@ body{ padding-top: 90px; }
   }
 }
 
+@media (max-width: 1244px){
+  .title{
+    font-size: 50px;
+  }
+}
+
+
 @media (max-width: 800px){
   .navbar{
-    height: 140px;
+    height: 120px;
+    
   }
 
   .my-project{
-    top:50px;
-    left: 210px;
+    left: 50%;
+    top:30px;
+    transform: translate(-50%, -50%);
+    
   }
 
   .nav-links{
-    top:50px;
-    right:205px;
-  }
+    left: 50%;
+    top: 70px;
+    transform: translate(-50%, -50%);
+    justify-content: center;
   
+  }
+
+  .nav-link{
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
   .nav-themes{
-    top: 105px;
+    top: 100px;
+    margin-right: 2px;
+    margin-left: 2px;
+    
   }
 
   .theme-button{
-    margin-right:10px;
-    margin-left:10px;
+    width: 20px !important;
+    height: 20px !important;
   }
 
   .title, .index-title {
-    margin-top: 70px;
+    margin-top: 50px;
     font-size: 60px;
-  }
-
-  .index-title{
-    margin-top: 100px;
+    
   }
 
   .subtext{
-    font-size: 15px;
+    font-size: 25px;
     margin-bottom: 30px;
-  }
-
-  .index-logo{
-    margin-top:100px;
-    margin-bottom: 100px;
   }
 
   body{
@@ -348,15 +362,30 @@ body{ padding-top: 90px; }
   footer{
     text-align: center;
   }
-
 }
 
-@media (max-width: 1244px){
+@media (max-width: 550px){
+
   .title{
-    font-size: 50px;
+    font-size: 40px;
+  }
+
+  .index-title{
+    font-size: 40px;
+  }
+
+  .index-logo{
+    width: 150px;
+  }
+
+  .js-score{
+    font-size: 20px;
+  }
+    
+  .clarification-message{
+    font-size: 20px;
   }
 }
-
 
 
 

@@ -1,15 +1,17 @@
 .facts-title {
-
-    margin: 0 auto;
     padding-top: 40px;
     text-align: center;
     font-size: 80px;
     font-weight: bold; 
-    margin:auto 10% 3% 10%;
+    margin: auto 10% 3% 10%;
 }
 
 hr{
     opacity: 50%;
+}
+
+strong{
+    font-size: 30px;
 }
 
 .facts-text {
@@ -18,24 +20,17 @@ hr{
     padding-top: 3%;
     margin: auto 10% auto 10%;
     text-align: center;
+    overflow-wrap: break-word;
     font-size: 18px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.6;
 
 }
 
-strong{
-    font-size: 30px;
-}
-
 .facts-imgs{
     width: 500px;
     margin-top: 40px;
     border-radius: 20px;
-}
-
-body{
-    padding-bottom: 5%;
 }
 
 @media (max-width: 1344px){
@@ -52,16 +47,46 @@ body{
 
 @media (max-width: 1008px){
     .facts-title{
-        margin-top: 30px;
         font-size: 50px;
     }
 }
 
-@media (max-width: 840px){
+@media (max-width: 800px){
     .facts-title{
         font-size: 40px;
     }
+
+    .facts-text{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
 }
+
+@media (max-width: 600px){
+    .facts-text{
+        max-width: 520px;
+        width: 92%;
+        margin: 0 auto; /*center*/
+        padding: 0 14px;
+        text-align: center;
+        box-sizing: border-box; /*padding да не променя ширината*/
+        word-break: break-word; /*допълнително ако има дълги думи/линкове*/
+    }
+
+    .facts-imgs{
+        width: 92%;
+        max-width: 420px;
+    }
+
+}
+
+@media (max-width: 450px){
+    .facts-title{
+        margin-top: 140px;
+    }
+}
+
+
 
 
 
