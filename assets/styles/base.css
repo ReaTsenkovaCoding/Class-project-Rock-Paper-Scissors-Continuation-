@@ -294,8 +294,38 @@ body{ padding-top: 90px; }
   .title{
     font-size: 50px;
   }
-}
 
+  .nav-link{
+    font-size: 15px;
+  }
+
+  .subtext{
+    font-size: 20px;
+  }
+
+   .move-button {
+    width: 140px;
+    height: 140px;
+  }
+
+  .move-icon {
+    height: 40px;
+  }
+
+  .js-score {
+    font-size: 20px;
+  }
+
+  .js-result {
+    font-size: 28px;
+  }
+
+  .reset-score-button {
+    width: 150px;
+    height: 56px;
+    font-size: 15px;
+  }
+}
 
 @media (max-width: 800px){
   .navbar{
