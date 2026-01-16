@@ -21,7 +21,8 @@ body {
   background-color: var(--bg);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:'Alfa Slab One', serif;
+  letter-spacing: 2px;
 
   display:flex;
   justify-content: center;
@@ -280,7 +281,7 @@ body{ padding-top: 90px; }
 =========================================================*/
 
 @media (max-width: 1310px){
-  .theme-png-right.show, .theme-png-left.show{
+  .theme-png-right, .theme-png-left{
     display: none !important;
   }
 
@@ -299,19 +300,19 @@ body{ padding-top: 90px; }
 @media (max-width: 800px){
   .navbar{
     height: 120px;
-    
   }
 
   .my-project{
     left: 50%;
     top:30px;
     transform: translate(-50%, -50%);
+    font-size: 15px;
     
   }
 
   .nav-links{
     left: 50%;
-    top: 70px;
+    top: 65px;
     transform: translate(-50%, -50%);
     justify-content: center;
   
@@ -387,5 +388,12 @@ body{ padding-top: 90px; }
   }
 }
 
+/*================ ULTRA WIDE SCREEN ================*/
 
+@media (min-width: 2400px) {
+  .game {
+    transform: scale(1.15);
+    transform-origin: top center;
+  }
+}
 
