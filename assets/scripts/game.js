@@ -65,9 +65,12 @@ function playGame(playerMove){
   );
 
   if(score.wins >= 5 || score.losses >= 5 || score.ties >= 5){
+
     gameOver = true;
     document.querySelector('.js-result').innerHTML = result;
+    localStorage.setItem('lastResult',result);
   }
+
 }
 
 /*=========================================================
@@ -85,6 +88,11 @@ updateScoreElement();
 if(localStorage.getItem('lastMoves')){
   document.querySelector('.js-moves').innerHTML =
     localStorage.getItem('lastMoves');
+}
+
+
+if(localStorage.getItem('lastResult')){
+  document.querySelector('.js-result').innerHTML = localStorage.getItem('lastResult');
 }
 
 gameOver = (
@@ -143,4 +151,5 @@ function setTheme(theme){
 
   theme_png_right.classList.add('show');
   theme_png_left.classList.add('show');
+
 }
