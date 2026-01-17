@@ -231,18 +231,23 @@ body.theme-orange .js-result{
 =========================================================*/
 
 body.theme-yellow{
-  --bg: #f9d95c;
+  --bg: #ffec73;
   --text: #6a5a1cc1;
   --border: #ffffff;
   --muted: #6a5a1cc1;
   --themePng: url('../images/yellow.png');
 }
+.navbar{
+  --text: #ffffff;
+}
 body.theme-yellow .move-button{
-  background-color: #fde688;
+  transition: all 0.3s ease;
+  border-color: #6a5a1cc1;
+  background-color: #fff29a;
 }
 body.theme-yellow .move-button:hover{
   transition: 0.2s ease;
-  background-color: #ffffb2;
+  background-color: #ffffff;
 }
 body.theme-yellow .theme-button{
   border: 3px solid rgba(71, 71, 71, 0.619);
@@ -252,6 +257,7 @@ body.theme-yellow .reset-score-button{
   color: #c5a95c;
   transition: all 0.3s ease;
 }
+
 body.theme-yellow .js-result{
   text-shadow: 0 0 10px rgba(158, 84, 10, 0.517);
 }
